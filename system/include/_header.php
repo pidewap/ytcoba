@@ -15,9 +15,9 @@
 <div style="padding: 10px;margin:10px;">
 <div id='search-box'>
 <form action="/search.php" id="autoform">
-<input class="dap_text_box" type="text" name="s" placeholder="Search Music, Video, Movie" value="" id="autoinput">
-<input class="dap_button" type="submit" value="Search">
-</form>
+  <input class="dap_text_box" type="text" name="q" placeholder="Search Music, Video, Movie" value="" id="autoinput">
+  <input class="dap_button" type="submit" value="Search">
+ </form>
 </div>
 </div>
 </div>
