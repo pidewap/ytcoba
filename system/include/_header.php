@@ -6,6 +6,7 @@
 <title><?php echo $title;?></title><?php echo $deskripsi;?><?php echo $config['headtag'];?>
 <link rel="shortcut icon" href="https://assets-cdn.github.com/favicon.ico">
 <link href="/mobile.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/flick/jquery-ui.css"/>
 </head>
 <body>
 
@@ -14,10 +15,12 @@
 <div style="margin-left: 20px;margin-right: 20px;margin-top: 3px;border-bottom: 1px solid #EEE;"></div>
 <div style="padding: 10px;margin:10px;">
 <div id='search-box'>
-<form action="/search.php" id="autoform">
-  <input class="dap_text_box" type="text" name="q" placeholder="Search Music, Video, Movie" value="" id="autoinput">
-  <input class="dap_button" type="submit" value="Search">
- </form>
+<form action='/search.php' method='get' target='_top' id='autoform'>
+<input name='s' placeholder='Search' type='text' id='autoinput'/>
+<button id='search-button' type='submit'>                     
+<span>Search</span>
+</button>
+</form>
 </div>
 </div>
 </div>
