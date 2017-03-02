@@ -1,0 +1,22 @@
+Options -Indexes
+
+ErrorDocument 404 /index.php
+
+<IfModule mod_rewrite.c>
+
+RewriteEngine on
+
+# Uncomment the following to redirect all visitors to the www version
+# RewriteCond %{HTTP_HOST} !^www\. [NC]
+# RewriteRule ^ http://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Uncomment the following to redirect all visitors to non www version
+# RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+# RewriteRule ^ http://%1%{REQUEST_URI} [L,R=301]
+
+RewriteEngine On
+RewriteRule ^([^/]*)\.html$ /?q=$1 [L]
+RewriteRule ^video/([^/]*)\.html$ /detail.php?yt=$1 [L]
+RewriteRule ^audio/([^/]*)\.html$ /detail.php?sc=$1 [L]
+RewriteRule ^sitemap.xml /system/sitemap/sitemap.php [L]
+</IfModule>
